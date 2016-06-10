@@ -1,16 +1,28 @@
 /**
  * Created by Siraj on 2016-06-08.
  */
-angular.module('outsnap',['ionic','ngRoute'])
 
-.controller('loginCtrl',function($scope){
-    console.log('login')
+(function(){
+
+  'use strict';
+
+angular.module('outsnap')
+  .controller('loginCtrl',loginCtrl)
+
+function loginCtrl ($scope,$state){
+   // console.log('login')
     $scope.login= function(){
-      console.log('login');
+    //  console.log('login');
+      $state.go('home')
+
     }
 
     $scope.signup = function (){
-      console.log('signup');
+    //  console.log("sra")
+      $state.go('signup')
     }
 
-  })
+
+
+  }
+})();

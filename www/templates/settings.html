@@ -1,0 +1,29 @@
+<ion-view view-title="signin">
+  <ion-header-bar class="bar bar-header bar-dark">
+    <button class="button button-icon" ng-click="back()">
+      <i class="icon ion-arrow-left-b"></i>
+    </button>
+    <h1 class="title">OutSnap</h1>
+
+  </ion-header-bar>
+  <ion-content>
+<div class="list list-inset">
+  <label class="item item-input">
+    <input type="text" placeholder="First Name">
+  </label>
+  <label class="item item-input">
+    <input type="email" placeholder="Email">
+  </label>
+  <label class="item item-input">
+    <input type="password" placeholder="Password">
+  </label>
+  <label class="item item-input">
+    <input type="date" placeholder="Date of Birth">
+  </label>
+  <ion-list>
+    <ion-radio ng-model="choice" ng-value="'M'">Male</ion-radio>
+    <ion-radio ng-model="choice" ng-value="'F'">Female</ion-radio>
+  </ion-list>
+</div>
+    </ion-content>
+  </ion-view>
