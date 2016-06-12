@@ -18,10 +18,15 @@
   function settingsCtrl ($scope,$state){
 
 
-    console.log("settingsCtrl")
-
       $scope.back = function(){
         $state.go('home');
       }
+    $scope.logout = function (){
+      $state.go('login')
+    }
+    $scope.profile = function (){
+      $state.go('profile')
+    }
+
   }
 })();

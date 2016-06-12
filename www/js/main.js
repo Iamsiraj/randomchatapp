@@ -47,8 +47,18 @@ myApp.config(function($stateProvider, $urlRouterProvider){
     })
     .state('chat', {
       url: "/chat",
-      templateUrl: "templates/chat.html",
-      controller: 'chatCtrl'
+      templateUrl: "templates/chat.html"
+
+    })
+    .state('profile', {
+      url: "/profile",
+      templateUrl: "templates/profile.html"
+
+    })
+    .state('edit', {
+      url: "/edit",
+      templateUrl: "templates/edit.html"
+
     })
   $urlRouterProvider.otherwise('/login');
 

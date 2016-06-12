@@ -16,16 +16,31 @@
     .controller('homeCtrl',homeCtrl)
 
   function homeCtrl ($scope,$state){
-
+$scope.profileButton =false;
+    $scope.list=false;
 
     $scope.settings = function (){
-      console.log("settings")
+
       $state.go('settings')
     }
 
     $scope.findFriends = function (){
       console.log("chat")
       $state.go('chat')
+    }
+
+    $scope.onSwipeLeft = function(){
+      console.log("swipeleft")
+      $scope.profileButton= true;
+    }
+    $scope.onSwipeRight = function(){
+      console.log("swipeRight")
+      $scope.profileButton= false;
+    }
+    $scope.viewProfile = function(){
+      console.log('profile')
+      $scope.list=true;
+      $state.go('profile')
     }
 
   }
